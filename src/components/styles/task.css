@@ -1,0 +1,67 @@
+.taskContainer{
+    height: 5vh;
+    gap: 3px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: #6C63FF 1px solid;
+    margin: 5px;
+}
+
+#edit, #delete {
+    display: none;
+}
+
+.taskContainer:hover #edit,
+.taskContainer:hover #delete {
+    display: inline-block;
+}
+
+#checkbox{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #6C63FF;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+#checkbox:checked::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "\2713";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    background-color: #6C63FF;
+    line-height: 1.5rem;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#taskInfo{
+    width: calc(100% - 30px);
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;    
+}
+
+#edit, #delete{
+    background: none;
+    border: none;
+    color: #CDCDCD;
+    margin: 0.2rem;
+}
+
+.checkedLabel{
+    text-decoration: line-through;
+    color: #CDCDCD;
+}
